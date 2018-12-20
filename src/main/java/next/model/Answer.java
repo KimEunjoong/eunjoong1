@@ -4,14 +4,11 @@ import java.util.Date;
 
 public class Answer {
     private long answerId;
-
     private String writer;
-
     private String contents;
-
     private Date createdDate;
-
     private long questionId;
+    private int countOfAnswer;
 
     public Answer(String writer, String contents, long questionId) {
         this(0, writer, contents, new Date(), questionId);
@@ -48,7 +45,16 @@ public class Answer {
     public long getQuestionId() {
         return questionId;
     }
-
+    
+    public int getCountOfAnswer() {
+    	return countOfAnswer;
+    }
+    
+    public void setCountAnswer(int count) {
+    	this.countOfAnswer = count;
+    }
+    
+    
     @Override
     public int hashCode() {
         final int prime = 31;
